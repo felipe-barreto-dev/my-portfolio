@@ -1,7 +1,9 @@
+import Layout from '@/presentation/layout/layout';
 import React from 'react';
+import { Container } from './home-styles';
 
 const Home = () => {
-  return <div>home</div>;
+  return <Layout>home</Layout>;
 };
 
 export default Home;
