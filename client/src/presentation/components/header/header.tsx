@@ -33,7 +33,7 @@ const Header: React.FC = () => {
       </CoverContainer>
       <ProfileContainer>
         <ProfileInfoContainer>
-          <ProfilePicture></ProfilePicture>
+          <ProfilePicture />
           <ProfileInfo>
             <span>Felipe Barreto Pereira</span>
             <p>Frontend & Backend</p>
