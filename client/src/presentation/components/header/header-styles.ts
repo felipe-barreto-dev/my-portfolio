@@ -19,11 +19,22 @@ export const TopContainer = styled.nav`
   width: 100%;
   height: 20%;
   padding: 30px 7vw;
+
+  @media (max-width: 647px) {
+    padding: 30px 3vw;
+  }
 `;
 
 export const Brand = styled.div`
   img {
     margin-left: -10px;
+  }
+
+  @media (max-width: 450px) {
+    img {
+      transform: scale(0.9);
+      margin-left: -25px;
+    }
   }
 `;
 
@@ -39,10 +50,24 @@ export const ProfileContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0px 7vw;
+
+  @media (max-width: 647px) {
+    padding: 0px 2vw;
+  }
+
+  @media (max-width: 450px) {
+    justify-content: center;
+  }
 `;
 
 export const ProfileInfoContainer = styled.div`
   display: flex;
+  align-items: center;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 export const ProfileInfo = styled.div`
@@ -51,20 +76,27 @@ export const ProfileInfo = styled.div`
   padding: 10px 30px;
 
   span {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
-    line-height: 39px;
     letter-spacing: 0em;
     text-align: left;
   }
 
   p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
-    line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
     color: #a39d9d;
+  }
+
+  @media (max-width: 450px) {
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -74,10 +106,24 @@ export const ProfilePicture = styled.div`
   background-position: center;
   background-size: cover;
   width: 200px;
+  min-width: 200px;
   height: 200px;
+  min-height: 200px;
   border-radius: 50%;
   border: 1px solid white;
   margin-top: -60px;
+
+  @media (max-width: 768px) {
+    min-width: 150px;
+    width: 150px;
+    min-height: 150px;
+    height: 150px;
+    margin-top: -40px;
+  }
+
+  @media (max-width: 450px) {
+    margin-top: -80px;
+  }
 `;
 
 export const VisitGithub = styled.button`
@@ -85,7 +131,7 @@ export const VisitGithub = styled.button`
   padding: 10px 25px;
   border-radius: 12px;
   border: none;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
   border-color: #3498db;
   transition: all 150ms ease-in-out;
@@ -94,5 +140,9 @@ export const VisitGithub = styled.button`
   &:hover {
     box-shadow: 0 0 10px 0 #ffde59 inset, 0 0 10px 4px #ffde59;
     border: 1px solid #ffde59;
+  }
+
+  @media (max-width: 647px) {
+    display: none;
   }
 `;
