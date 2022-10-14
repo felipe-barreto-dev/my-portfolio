@@ -36,7 +36,13 @@ export const NavItem = styled.li``;
 
 export const ProfileContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 0px 7vw;
+`;
+
+export const ProfileInfoContainer = styled.div`
+  display: flex;
 `;
 
 export const ProfileInfo = styled.div`
@@ -58,6 +64,7 @@ export const ProfileInfo = styled.div`
     line-height: 29px;
     letter-spacing: 0em;
     text-align: left;
+    color: #a39d9d;
   }
 `;
 
@@ -73,4 +80,19 @@ export const ProfilePicture = styled.div`
   margin-top: -60px;
 `;
 
-export const VisitGithub = styled.div``;
+export const VisitGithub = styled.button`
+  background-color: #23395b;
+  padding: 10px 25px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #3498db;
+  transition: all 150ms ease-in-out;
+  border: 1px solid rgba(125, 125, 125, 0.7);
+
+  &:hover {
+    box-shadow: 0 0 10px 0 #ffde59 inset, 0 0 10px 4px #ffde59;
+    border: 1px solid #ffde59;
+  }
+`;

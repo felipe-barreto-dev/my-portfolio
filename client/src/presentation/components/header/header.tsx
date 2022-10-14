@@ -9,11 +9,16 @@ import {
   ProfileContainer,
   ProfilePicture,
   ProfileInfo,
-  VisitGithub
+  VisitGithub,
+  ProfileInfoContainer
 } from './header-styles';
 import DarkBrand from '@/presentation/assets/svgs/brand-black-theme.svg';
 
 const Header: React.FC = () => {
+  const goToGithub = () => {
+    window.open('https://github.com/felipe-barreto-dev');
+  };
+
   return (
     <HeaderContainer>
       <CoverContainer>
@@ -27,11 +32,14 @@ const Header: React.FC = () => {
         </TopContainer>
       </CoverContainer>
       <ProfileContainer>
-        <ProfilePicture></ProfilePicture>
-        <ProfileInfo>
-          <span>Felipe Barreto Pereira</span>
-          <p>Frontend & Backend</p>
-        </ProfileInfo>
+        <ProfileInfoContainer>
+          <ProfilePicture></ProfilePicture>
+          <ProfileInfo>
+            <span>Felipe Barreto Pereira</span>
+            <p>Frontend & Backend</p>
+          </ProfileInfo>
+        </ProfileInfoContainer>
+        <VisitGithub onClick={goToGithub}>Visit Github</VisitGithub>
       </ProfileContainer>
     </HeaderContainer>
   );
