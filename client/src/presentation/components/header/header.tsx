@@ -5,7 +5,11 @@ import {
   TopContainer,
   Brand,
   NavArea,
-  NavItem
+  NavItem,
+  ProfileContainer,
+  ProfilePicture,
+  ProfileInfo,
+  VisitGithub
 } from './header-styles';
 import DarkBrand from '@/presentation/assets/svgs/brand-black-theme.svg';
 
@@ -15,13 +19,20 @@ const Header: React.FC = () => {
       <CoverContainer>
         <TopContainer>
           <Brand>
-            <DarkBrand />
+            <img src={DarkBrand} />
           </Brand>
           <NavArea>
             <NavItem>Projetos</NavItem>
           </NavArea>
         </TopContainer>
       </CoverContainer>
+      <ProfileContainer>
+        <ProfilePicture></ProfilePicture>
+        <ProfileInfo>
+          <span>Felipe Barreto Pereira</span>
+          <p>Frontend & Backend</p>
+        </ProfileInfo>
+      </ProfileContainer>
     </HeaderContainer>
   );
 };
