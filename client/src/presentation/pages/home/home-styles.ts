@@ -18,6 +18,14 @@ export const AboutMe = styled.section`
   p {
     flex: 3;
   }
+
+  @media (max-width: 650px) {
+    padding: 0px;
+
+    span {
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const Title = styled.span`
@@ -38,10 +46,35 @@ export const PersonalInfo = styled.section`
   display: flex;
   justify-content: space-between;
   padding: 20px 70px;
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+    padding: 20px 20px;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  @media (max-width: 650px) {
+    span {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
 `;
 
 export const SeparatorLine = styled.hr`
   margin: 50px 20px;
+
+  @media (max-width: 650px) {
+    margin: 20px 20px;
+  }
 `;
 
 export const ProjectsSection = styled.section`
@@ -54,6 +87,16 @@ export const Projects = styled.div`
   display: grid;
   grid-template-columns: 30% 30% 30%;
   gap: 4.5%;
+
+  @media (max-width: 840px) {
+    grid-template-columns: 47.5% 47.5%;
+    gap: 5%;
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 100%;
+    gap: 5%;
+  }
 `;
 
 export const Project = styled.div`
@@ -66,6 +109,12 @@ export const Project = styled.div`
   div {
     display: flex;
     justify-content: end;
+  }
+
+  @media (max-width: 650px) {
+    div {
+      justify-content: start;
+    }
   }
 `;
 
