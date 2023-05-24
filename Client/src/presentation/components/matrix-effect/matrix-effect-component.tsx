@@ -11,7 +11,7 @@ const MatrixEffect: React.FC = () => {
       return;
     }
 
-    const texts = '0123456789'.split('');
+    const texts = '01100110 01100101 01101100 01101001 01110000 01100101'.split('');
     const fontSize = 16;
     let columns = Math.floor(canvas.width / fontSize);
     const drops: number[] = [];
@@ -63,7 +63,15 @@ const MatrixEffect: React.FC = () => {
     };
   }, []);
 
-  return <canvas style={{ width: '100%', height: '100%' }} ref={canvasRef}></canvas>;
+  return (
+    <canvas
+      style={{
+        width: '100%',
+        height: '100%',
+        opacity: 0.2
+      }}
+      ref={canvasRef}></canvas>
+  );
 };
 
 export default MatrixEffect;
