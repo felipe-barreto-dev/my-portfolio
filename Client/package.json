@@ -47,6 +47,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
+    "styled-components": "^6.0.0-rc.1",
     "ts-loader": "^9.4.1"
   }
 }
