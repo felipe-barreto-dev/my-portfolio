@@ -62,18 +62,25 @@ export const AsideNavigation = styled.nav`
   ul {
     background-color: initial;
   }
+`;
 
-  li {
-    background-color: initial;
-    font-weight: 500;
-    font-size: 1em;
-    line-height: 2em;
-    cursor: pointer;
-    transition: 0.1s;
+interface ListMenuItemProps {
+  selected: boolean;
+}
 
-    &:hover {
-      transform: scale(1.2);
-      color: #0f0;
-    }
+export const ListMenuItem = styled.li<ListMenuItemProps>`
+  background-color: initial;
+  font-weight: 500;
+  font-size: 1.25em;
+  line-height: 1.75em;
+  cursor: pointer;
+  transition: 0.1s;
+  list-style: ${(props) => (props.selected ? 'disc' : 'none')};
+  color: ${(props) => (props.selected ? '#0f0' : 'inherit')};
+  transform: ${(props) => (props.selected ? 'scale(1)' : 'scale(0.8)')};
+
+  &:hover {
+    transform: scale(1);
+    color: #0f0;
   }
 `;
